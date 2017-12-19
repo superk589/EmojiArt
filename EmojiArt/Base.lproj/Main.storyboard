@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -155,6 +156,52 @@
                                             <constraint firstItem="CbE-gh-4QS" firstAttribute="centerY" secondItem="nOO-uc-yYj" secondAttribute="centerY" id="G2o-hn-1jq"/>
                                             <constraint firstItem="CbE-gh-4QS" firstAttribute="centerX" secondItem="nOO-uc-yYj" secondAttribute="centerX" id="u91-cS-aPw"/>
                                         </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddEmojiButtonCell" id="H3o-6a-Ntk">
+                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJW-P4-ME6">
+                                                    <rect key="frame" x="20.5" y="-4.5" width="39" height="89"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                    <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="addEmoji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MDc-zJ-6n6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="IJW-P4-ME6" firstAttribute="centerY" secondItem="H3o-6a-Ntk" secondAttribute="centerY" id="U4J-sq-TU5"/>
+                                            <constraint firstItem="IJW-P4-ME6" firstAttribute="centerX" secondItem="H3o-6a-Ntk" secondAttribute="centerX" id="Y9V-eK-3Lb"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiInputCell" id="Wg6-X5-xLq" customClass="TextFieldCollectionViewCell" customModule="EmojiArt" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evd-RJ-UaI">
+                                                    <rect key="frame" x="8" y="1.5" width="64" height="77"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Evd-RJ-UaI" firstAttribute="centerY" secondItem="Wg6-X5-xLq" secondAttribute="centerY" id="WrM-6h-6dx"/>
+                                            <constraint firstItem="Evd-RJ-UaI" firstAttribute="centerX" secondItem="Wg6-X5-xLq" secondAttribute="centerX" id="oTy-cE-30Y"/>
+                                            <constraint firstItem="Evd-RJ-UaI" firstAttribute="leading" secondItem="Wg6-X5-xLq" secondAttribute="leadingMargin" id="oxx-Ao-RyB"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="textField" destination="Evd-RJ-UaI" id="Krg-xb-zX0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
